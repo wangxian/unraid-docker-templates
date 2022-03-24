@@ -10,7 +10,7 @@
   <Overview>alpine-php is a docker container, This creates a Docker container running Nginx and PHP-FPM on Alpine Linux.</Overview>
   <Category>Developers: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <Icon>https://cdn.jsdelivr.net/gh/wangxian/unraid-docker-templates/wangxian@main/icons/alpine-php.png</Icon>
+  <Icon>https://cdn.jsdelivr.net/gh/wangxian/unraid-docker-templates/wangxian@main/wangxian/icons/alpine-php.png</Icon>
   <Description>alpine-php is a docker container, This creates a Docker container running Nginx and PHP-FPM on Alpine Linux.</Description>
   <Networking>
     <Mode>bridge</Mode>
