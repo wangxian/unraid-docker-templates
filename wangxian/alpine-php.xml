@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>alpine</Name>
+  <Repository>wangxian/alpine-php</Repository>
+  <Registry>https://hub.docker.com/r/wangxian/alpine-php</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://hub.docker.com/r/wangxian/alpine-php</Project>
+  <Overview>alpine-php is a docker container, This creates a Docker container running Nginx and PHP-FPM on Alpine Linux.</Overview>
+  <Category>Developers: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <Icon>https://cdn.jsdelivr.net/gh/wangxian/unraid-docker-templates/wangxian/icons/alpine-php.png</Icon>
+  <Description>alpine-php is a docker container, This creates a Docker container running Nginx and PHP-FPM on Alpine Linux.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/alpine-php</HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>prod</Value>
+      <Name>RUN_ENV</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="User UID" Target="PUID" Default="1000" Mode="" Description="Bind UID to the container, which means you can use a non-root user to manage files." Type="Variable" Display="always-hide" Required="true" Mask="false">1000</Config>
+  <Config Name="User GID" Target="PGID" Default="100" Mode="" Description="Bind GID to the container, which means you can use a non-root user to manage files." Type="Variable" Display="always-hide" Required="true" Mask="false">100</Config>
+  <Config Name="RUN ENV" Target="RUN_ENV" Default="prod" Mode="tcp" Description="Web run variable." Type="Variable" Display="always-hide" Required="true" Mask="false">prod</Config>
+</Container>
